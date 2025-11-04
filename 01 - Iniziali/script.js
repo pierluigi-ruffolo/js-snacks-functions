@@ -12,7 +12,7 @@ const names = [
 ];
 
 // Dichiara la funzione qui.
-function iniziali(nomi) {
+/* function iniziali(nomi) {
   const inizialiArray = [];
   for (let i = 0; i < nomi.length; i++) {
     const nome = nomi[i];
@@ -20,10 +20,22 @@ function iniziali(nomi) {
     inizialiArray.push(iniziale);
   }
   return inizialiArray;
-}
+} */
 
 // Invoca la funzione qui e stampa il risultato in console
-const risultato = iniziali(names);
-console.log(risultato);
+/* const risultato = iniziali(names);
+console.log(risultato); */
 
 //Risultato atteso: ["A", "L", "M", "A", "G", "A"]
+
+const iniziali = (names) => {
+  const inizialiArray = [];
+  for (let i = 0; i < names.length; i++) {
+    const nome = names[i];
+    const iniziale = nome[0];
+    inizialiArray.push(iniziale);
+  }
+  return inizialiArray;
+};
+const risultato = iniziali(names);
+console.log(risultato);
