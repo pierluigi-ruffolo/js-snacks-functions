@@ -2,7 +2,7 @@
  e restituisca il numero di vocali
   contenute al suo interno */
 
-const word = "javascript";
+/* const word = "javascript"; */
 
 // Dichiara la funzione qui.
 /* function numeriVocali(word) {
@@ -29,21 +29,25 @@ console.log(risultato); */
 
 //Risultato atteso se si passa 'javascript': 3 (a, a, i)
 
+const word = "javascript";
 const numerivocali = (word) => {
-  let number = 0;
+  let numeri = 0;
+  let elencoVocali = [];
   for (let i = 0; i < word.length; i++) {
-    const vocale = word[i].toLowerCase();
+    const vocali = word[i].toLowerCase();
     if (
-      vocale === "a" ||
-      vocale === "e" ||
-      vocale === "i" ||
-      vocale === "o" ||
-      vocale === "u"
+      vocali === "a" ||
+      vocali === "e" ||
+      vocali === "i" ||
+      vocali === "o" ||
+      vocali === "u"
     ) {
-      number++;
+      numeri++;
+      elencoVocali.push(vocali);
     }
   }
-  return number;
+
+  return `${numeri} (${elencoVocali.join(",")})`;
 };
 
 const risultato = numerivocali(word);
